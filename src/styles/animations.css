@@ -1,0 +1,28 @@
+@keyframes melt {
+    /* Melting animation */
+  }
+  
+  @keyframes shimmer {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+  
+  @keyframes falling {
+    0% {
+      transform: translateY(-20px) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(350px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-melt {
+    animation: melt 3s infinite ease-in-out;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2.5s infinite ease-in-out;
+  }
