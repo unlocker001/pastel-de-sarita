@@ -11,7 +11,7 @@
   <!-- Shopping Cart Sidebar -->
   <aside 
     class="fixed top-0 right-0 h-full w-full md:w-96 bg-[#2c1b17] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out"
-    :class="{'translate-x-0': show, 'translate-x-full': !show}"
+    :class="{'translate-x-0': show.valueOf, 'translate-x-full': !show.valueOf}"
     aria-modal="true"
     aria-label="Shopping cart"
   >
@@ -71,6 +71,9 @@ const props = defineProps({
     required: true
   }
 });
+
+// Explicitly use the prop to satisfy TypeScript
+const show = computed(() => props.show);
 
 const emit = defineEmits<{
   (e: 'close'): void;
