@@ -107,7 +107,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useCartStore } from '../stores/cart'; // Add this import
+import { useCartStore } from '../stores/cart';
 
 interface QuizOption {
   text: string;
@@ -220,7 +220,20 @@ const cakes: Cake[] = [
 
 const currentStep = ref<number>(0);
 const answers = ref<Record<number, string>>({});
-const cartStore = useCartStore(); // Initialize the cart store
+const cartStore = useCartStore();
+
+// Hover effect methods
+const hoverOption = (event: MouseEvent) => {
+  const target = event.currentTarget as HTMLElement;
+  target.style.transform = 'scale(1.02)';
+  target.style.backgroundColor = '#f5f5f5';
+};
+
+const resetOption = (event: MouseEvent) => {
+  const target = event.currentTarget as HTMLElement;
+  target.style.transform = 'scale(1)';
+  target.style.backgroundColor = '';
+};
 
 const selectOption = (value: string): void => {
   answers.value[currentStep.value] = value;
@@ -250,12 +263,11 @@ const resetQuiz = (): void => {
 const addToCart = (cake: Cake): void => {
   cartStore.addItem({
     id: cake.id,
-    name: cake.title, // or title: cake.title if your store uses 'title'
+    name: cake.title,
     price: cake.price,
     image: cake.image
   });
   
-  // Optional: Add visual feedback
   const button = document.querySelector('.add-to-cart-button');
   if (button) {
     button.classList.add('animate-pulse');
@@ -264,6 +276,7 @@ const addToCart = (cake: Cake): void => {
     }, 500);
   }
 };
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,

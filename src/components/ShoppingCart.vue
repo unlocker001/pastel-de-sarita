@@ -64,6 +64,7 @@ import EmptyCart from './EmptyCart.vue';
 import CartItem from './CartItem.vue';
 import CartFooter from './CartFooter.vue';
 
+// Props are used in template, so we'll keep them
 const props = defineProps({
   show: {
     type: Boolean,
@@ -93,10 +94,10 @@ const handleCheckout = () => {
   // cartStore.clearCart();
 };
 
-// Add this if you want to expose toggle functionality to parent
-const toggleCart = () => {
-  emit('close');
-};
+// Remove this unused function
+// const toggleCart = () => {
+//   emit('close');
+// };
 </script>
 
 <style scoped>
