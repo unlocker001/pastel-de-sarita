@@ -1,0 +1,43 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf (more curved like CSS version) -->
+  <path d="M26 5Q28 0 32 4Q34 8 30 10" fill="#388e3c" stroke="#2e7d32" stroke-width="0.5"/>
+  
+  <!-- Stem (angled like CSS version) -->
+  <path d="M25 12L27 5" stroke="#5d4037" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Cherry body with proper shading -->
+  <circle cx="25" cy="20" r="12" fill="#e53935">
+    <animate attributeName="r" values="12;12.5;12" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  
+  <!-- Inner shadow effect -->
+  <circle cx="25" cy="20" r="12" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="3,1" opacity="0.3"/>
+  
+  <!-- Highlight (positioned like CSS version) -->
+  <circle cx="28" cy="16" r="4" fill="white" fill-opacity="0.7" filter="url(#highlight-blur)"/>
+  
+  <!-- Shadow effects -->
+  <defs>
+    <!-- Highlight blur filter -->
+    <filter id="highlight-blur" x="22" y="12" width="12" height="12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+    
+    <!-- Drop shadow for the cherry -->
+    <filter id="cherry-shadow" x="10" y="10" width="30" height="30" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over"/>
+    </filter>
+    
+    <!-- Gradient for cherry -->
+    <radialGradient id="cherry-gradient" cx="0.6" cy="0.4" r="0.8" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="50%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Apply filters and gradient -->
+  <circle cx="25" cy="20" r="12" fill="url(#cherry-gradient)" filter="url(#cherry-shadow)"/>
+</svg>
