@@ -82,7 +82,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, defineProps, defineEmits, type PropType } from 'vue';
+
+interface FilterOption {
+  value: string;
+  label: string;
+}
 
 const props = defineProps({
   filters: {
@@ -90,11 +95,11 @@ const props = defineProps({
     required: true
   },
   chocolateTypes: {
-    type: Array,
+    type: Array as PropType<FilterOption[]>,
     required: true
   },
   occasions: {
-    type: Array,
+    type: Array as PropType<FilterOption[]>,
     required: true
   }
 });
