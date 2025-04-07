@@ -11,7 +11,7 @@
   <!-- Shopping Cart Sidebar -->
   <aside 
     class="fixed top-0 right-0 h-full w-full md:w-96 bg-[#2c1b17] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out"
-    :class="{'translate-x-0': show.valueOf, 'translate-x-full': !show.valueOf}"
+    :class="{'translate-x-0': show, 'translate-x-full': !show}"
     aria-modal="true"
     aria-label="Shopping cart"
   >
@@ -64,7 +64,7 @@ import EmptyCart from './EmptyCart.vue';
 import CartItem from './CartItem.vue';
 import CartFooter from './CartFooter.vue';
 
-// Props are used in template, so we'll keep them
+// Define props without creating an unnecessary computed property
 const props = defineProps({
   show: {
     type: Boolean,
@@ -72,8 +72,7 @@ const props = defineProps({
   }
 });
 
-// Explicitly use the prop to satisfy TypeScript
-const show = computed(() => props.show);
+console.log(props)
 
 const emit = defineEmits<{
   (e: 'close'): void;
@@ -93,14 +92,7 @@ const removeItem = (id: string | number) => {
 const handleCheckout = () => {
   emit('checkout');
   emit('close');
-  // You might want to clear the cart here or after successful checkout
-  // cartStore.clearCart();
 };
-
-// Remove this unused function
-// const toggleCart = () => {
-//   emit('close');
-// };
 </script>
 
 <style scoped>

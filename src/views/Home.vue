@@ -14,14 +14,14 @@
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate-slide-up delay-200">
           <router-link 
-            to="/explore"
+            to="/pastel-de-sarita/explore"
             @click="scrollToTop"
             class="inline-block bg-[#3e2723] hover:bg-[#5d4037] text-[#ffd54f] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full text-base sm:text-lg transition-all hover:scale-105 shadow-lg animate-pulse-slow"
           >
             Begin Your Journey
           </router-link>
           <router-link 
-            to="/about"
+            to="/pastel-de-sarita/about"
             @click="scrollToTop"
             class="inline-block border-2 border-[#3e2723] text-[#3e2723] hover:bg-[#5d4037] hover:text-[#ffd54f] hover:border-[#5d4037] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full text-base sm:text-lg transition-all hover:scale-105 shadow-lg"
           >
@@ -52,7 +52,7 @@
             For over a decade, Sarita has perfected the art of chocolate alchemy, blending traditional techniques with innovative flavors.
           </p>
           <router-link 
-            to="/about"
+            to="/pastel-de-sarita/about"
             @click="scrollToTop"
             class="inline-flex items-center text-[#5d4037] font-bold group hover:text-[#3e2723] text-sm md:text-base animate-fade-in delay-500"
           >
@@ -113,7 +113,7 @@
           Learn about our sustainable sourcing and traditional techniques
         </p>
         <router-link 
-          to="/about"
+          to="/pastel-de-sarita/about"
           @click="scrollToTop"
           class="inline-block bg-[#ffd54f] hover:bg-[#ffc107] text-[#5d4037] font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-base md:text-lg transition-all hover:scale-105 shadow-lg animate-pulse-slow"
         >
@@ -130,19 +130,19 @@ const collections = [
     name: "Dark Chocolate Selection",
     description: "Rich, intense flavors for true connoisseurs",
     image: "/dark-chocolate-collection.jpg",
-    link: "/explore?type=dark"
+    link: "/pastel-de-sarita/explore?type=dark"
   },
   {
     name: "Decadent Creations",
     description: "Our most luxurious signature cakes",
     image: "/signature-collection.jpg",
-    link: "/explore?collection=signature"
+    link: "/pastel-de-sarita/explore?collection=signature"
   },
   {
     name: "Seasonal Specials",
     description: "Limited edition flavors celebrating the season",
     image: "/seasonal-collection.jpg",
-    link: "/explore?collection=seasonal"
+    link: "/pastel-de-sarita/explore?collection=seasonal"
   }
 ];
 const scrollToTop = () => {

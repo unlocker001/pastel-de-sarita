@@ -4,7 +4,7 @@
     <p class="text-lg sm:text-xl mb-1 sm:mb-2 animate-slide-up">Your cart is empty</p>
     <p class="text-xs sm:text-sm text-[#ffd54f]/80 animate-slide-up delay-100">Add some delicious cakes!</p>
     <router-link 
-      to="/explore"
+      to="/pastel-de-sarita/explore"
       @click="handleBrowseAndScroll"
       class="mt-4 sm:mt-6 inline-block bg-[#ffd54f] hover:bg-[#ffc107] text-[#5d4037] font-bold py-2 px-6 rounded-full text-sm sm:text-base transition-all hover:scale-105 shadow-lg animate-pulse-slow"
     >

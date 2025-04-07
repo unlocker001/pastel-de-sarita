@@ -58,7 +58,7 @@
           Take our quick quiz to discover which chocolate creations match your taste
         </p>
         <router-link 
-          to="/quiz"
+          to="/pastel-de-sarita/quiz"
           @click="scrollToTop"
           class="inline-block bg-[#ffd54f] hover:bg-[#ffc107] text-[#5d4033] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full text-base sm:text-lg transition-all hover:scale-105 shadow-lg animate-pulse-slow"
         >

@@ -14,22 +14,22 @@ import Quiz from './views/Quiz.vue'
 // Define routes
 const routes = [
   {
-    path: '/',
+    path: '/pastel-de-sarita/',
     name: 'Home',
     component: Home
   },
   {
-    path: '/about',
+    path: '/pastel-de-sarita/about',
     name: 'About',
     component: About
   },
   {
-    path: '/explore',
+    path: '/pastel-de-sarita/explore',
     name: 'Explore',
     component: Explore
   },
   {
-    path: '/quiz',
+    path: '/pastel-de-sarita/quiz',
     name: 'Quiz',
     component: Quiz
   }

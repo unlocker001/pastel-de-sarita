@@ -95,7 +95,7 @@
         Go check out our creations and choose your favorites
       </p>
       <router-link 
-        to="/explore"
+        to="/pastel-de-sarita/explore"
         @click="scrollToTop"
         class="inline-block bg-[#ffd54f] hover:bg-[#ffc107] text-[#5d4037] font-bold py-3 px-8 rounded-full text-lg transition-all hover:scale-105 shadow-lg animate-pulse-slow"
       >

@@ -87,10 +87,10 @@ const sprinkleColors = [
 ];
 
 const navButtons = ref<NavButton[]>([
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' }, // Shortened for mobile
-  { label: 'Explore', path: '/explore' },
-  { label: 'Matchmaker', path: '/quiz' } // Shortened for mobile
+  { label: 'Home', path: '/pastel-de-sarita/' },
+  { label: 'About', path: '/pastel-de-sarita/about' }, // Shortened for mobile
+  { label: 'Explore', path: '/pastel-de-sarita/explore' },
+  { label: 'Matchmaker', path: '/pastel-de-sarita/quiz' } // Shortened for mobile
 ]);
 
 const getSprinkleStyle = (i: number) => ({
