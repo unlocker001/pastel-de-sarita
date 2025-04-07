@@ -6,7 +6,6 @@
       @click.self="$emit('close')"
     >
       <div class="relative max-w-full sm:max-w-4xl w-full mx-2 animate-pop-in">
-        <!-- Top Close Button (Desktop) -->
         <button 
           @click="$emit('close')" 
           class="hidden sm:block absolute -top-12 right-0 text-white hover:text-[#ffd54f] transition-all duration-300 transform hover:scale-110"
@@ -21,7 +20,6 @@
           :alt="altText || 'Image preview'"
         >
 
-        <!-- Bottom Close Button (Mobile) -->
         <button
           @click="$emit('close')"
           class="sm:hidden mt-4 w-full bg-[#ffd54f] hover:bg-[#ffc107] text-[#5d4037] font-bold py-3 px-4 rounded-lg transition-all duration-300 hover:scale-[1.02] active:scale-95"
@@ -53,7 +51,6 @@ defineEmits(['close']);
 </script>
 
 <style scoped>
-/* Modal transition */
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,7 +68,6 @@ defineEmits(['close']);
   backdrop-filter: blur(4px);
 }
 
-/* Image animations */
 .animate-pop-in {
   animation: popIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -98,22 +94,18 @@ defineEmits(['close']);
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
 
-/* Backdrop effect */
 body.modal-open {
   overflow: hidden;
 }
 
-/* Interactive elements */
 button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Mobile-specific adjustments */
 @media (max-width: 640px) {
   .fixed {
     padding: 0.5rem;

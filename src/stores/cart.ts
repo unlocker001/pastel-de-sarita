@@ -3,17 +3,15 @@ import { ref, computed } from 'vue'
 
 interface CartItem {
     id: string | number;
-    name: string;    // Make sure this exists (or 'title' if your products use that)
+    name: string;
     price: number;
     quantity: number;
     image?: string;
 }
 
 export const useCartStore = defineStore('cart', () => {
-  // State
   const items = ref<CartItem[]>([])
 
-  // Getters
   const totalItems = computed(() => 
     items.value.reduce((total, item) => total + item.quantity, 0)
   )
@@ -24,7 +22,6 @@ export const useCartStore = defineStore('cart', () => {
 
   const isEmpty = computed(() => items.value.length === 0)
 
-  // Actions
   function addItem(item: Omit<CartItem, 'quantity'>) {
     const existingItem = items.value.find(i => i.id === item.id)
     

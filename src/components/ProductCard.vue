@@ -1,6 +1,5 @@
 <template>
   <article class="text-center bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl transform transition-all hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl sm:hover:shadow-2xl border-t-4 border-[#ffd54f] relative overflow-visible animate-fade-in">
-    <!-- Cherry decoration -->
     <div class="cherry-container animate-float">
       <div class="cherry">
         <div class="cherry-highlight"></div>
@@ -9,7 +8,6 @@
       <div class="cherry-leaf"></div>
     </div>
     
-    <!-- Product image with preview -->
     <figure 
       class="relative group cursor-pointer" 
       @click="emitPreview(product.image)"
@@ -30,14 +28,12 @@
       </figcaption>
     </figure>
     
-    <!-- Product details -->
     <header class="animate-slide-up">
       <h3 class="text-2xl sm:text-3xl font-semibold mb-1 sm:mb-2 text-[#3e2723]">{{ product.title }}</h3>
       <p class="text-sm sm:text-md text-[#5d4037] italic">{{ product.description }}</p>
       <p class="text-lg sm:text-xl font-bold text-[#3e2723] my-2 sm:my-3 animate-pulse-slow">${{ product.price.toFixed(2) }}</p>
     </header>
     
-    <!-- Add to cart button -->
     <button 
       @click.stop="addToCart"
       class="mt-2 sm:mt-3 relative overflow-hidden bg-gradient-to-br from-[#3e2723] to-[#5d4037] text-[#ffd54f] py-2 px-6 sm:py-3 sm:px-8 rounded-md sm:rounded-lg text-base sm:text-lg font-semibold hover:scale-[1.03] transition-all duration-300 group border-2 border-[#ffd54f]/30 hover:border-[#ffd54f]/80 hover:shadow-[0_0_10px_rgba(255,213,79,0.3)] sm:hover:shadow-[0_0_15px_rgba(255,213,79,0.3)] focus:outline-none focus:ring-2 focus:ring-[#ffd54f]"
@@ -95,7 +91,6 @@ const addToCart = () => {
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -155,7 +150,6 @@ const addToCart = () => {
   }
 }
 
-/* Cherry decoration */
 .cherry-container {
   position: absolute;
   top: -20px;
@@ -210,7 +204,6 @@ const addToCart = () => {
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Responsive adjustments */
 @media (min-width: 640px) {
   .cherry-container {
     top: -25px;

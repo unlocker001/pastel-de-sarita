@@ -59,7 +59,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Button transition */
 .scroll-button-enter-active,
 .scroll-button-leave-active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,19 +75,16 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(255, 213, 79, 0.3);
 }
 
-/* Focus styles for accessibility */
 button:focus-visible {
   outline: 2px solid #ffd54f;
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.3);
 }
 
-/* Touch feedback for mobile */
 button:active {
   transform: scale(0.95);
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   button {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);

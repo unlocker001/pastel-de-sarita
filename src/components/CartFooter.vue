@@ -33,14 +33,11 @@ const totalPrice = computed(() => cartStore.totalPrice);
 const isEmpty = computed(() => cartStore.isEmpty);
 
 const handleCheckout = () => {
-  // You can add any pre-checkout logic here
-  // For example: cartStore.clearCart();
-  // Or navigate to checkout page
+
 };
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -77,7 +74,6 @@ const handleCheckout = () => {
   }
 }
 
-/* Button styles */
 button {
   position: relative;
   overflow: hidden;
@@ -89,14 +85,12 @@ button:disabled:hover {
   box-shadow: none !important;
 }
 
-/* Focus styles for accessibility */
 button:focus-visible {
   outline: 2px solid #ffd54f;
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.3);
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .cart-footer {
     padding-top: 0.75rem;

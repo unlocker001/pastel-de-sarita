@@ -4,7 +4,6 @@
     <div class="flex-grow">
       <h4 class="text-[#ffd54f] font-medium text-sm sm:text-base">{{ item.name }}</h4>
       <div class="flex items-center mt-1 gap-1 sm:gap-2">
-        <!-- Decrease quantity button -->
         <button 
           @click="decreaseQuantity"
           class="text-[#fff9f1] hover:text-[#ffd54f] transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-[#5d4037]"
@@ -14,12 +13,10 @@
           <MinusIcon class="h-2.5 w-2.5 sm:h-3 sm:w-3" />
         </button>
         
-        <!-- Quantity display -->
         <span class="text-[#fff9f1] text-xs sm:text-sm min-w-[16px] sm:min-w-[20px] text-center">
           {{ item.quantity }}
         </span>
         
-        <!-- Increase quantity button -->
         <button 
           @click="increaseQuantity"
           class="text-[#fff9f1] hover:text-[#ffd54f] transition-colors w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-[#5d4037]"
@@ -27,7 +24,6 @@
           <PlusIcon class="h-2.5 w-2.5 sm:h-3 sm:w-3" />
         </button>
         
-        <!-- Price -->
         <span class="text-[#fff9f1] text-xs sm:text-sm ml-1 sm:ml-2">${{ (item.price * item.quantity).toFixed(2) }}</span>
       </div>
     </div>

@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-[#f9f5f0] to-[#fff9f1] text-[#3e2723] font-serif">
-    <!-- Hero Section -->
     <section class="relative pt-20 pb-12 px-4 md:pt-32 md:pb-24 md:px-6 text-center z-10 animate-fade-in">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-[#3e2723] animate-slide-up">
@@ -31,7 +30,6 @@
       </div>
     </section>
 
-    <!-- Artisan Spotlight -->
     <section class="py-12 md:py-16 bg-[#fff9f1] border-y border-[#d7ccc8] animate-fade-in">
       <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <div class="md:w-1/2 w-full animate-slide-right">
@@ -65,7 +63,6 @@
       </div>
     </section>
 
-    <!-- Featured Collections -->
     <section class="relative z-10 pb-12 md:pb-16 bg-[#f9f5f0] animate-fade-in">
       <div class="max-w-6xl mx-auto px-4 md:px-6">
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 pt-8 animate-slide-up">
@@ -105,7 +102,6 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="py-12 md:py-16 bg-[#3e2723] text-[#ffd54f] animate-fade-in">
       <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
         <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 animate-slide-up">Our Chocolate Philosophy</h2>
@@ -129,19 +125,19 @@ const collections = [
   {
     name: "Dark Chocolate Selection",
     description: "Rich, intense flavors for true connoisseurs",
-    image: "/dark-chocolate-collection.jpg",
+    image: "./dark-chocolate-collection.jpg",
     link: "/pastel-de-sarita/explore?type=dark"
   },
   {
     name: "Decadent Creations",
     description: "Our most luxurious signature cakes",
-    image: "/signature-collection.jpg",
+    image: "./signature-collection.jpg",
     link: "/pastel-de-sarita/explore?collection=signature"
   },
   {
     name: "Seasonal Specials",
     description: "Limited edition flavors celebrating the season",
-    image: "/seasonal-collection.jpg",
+    image: "./seasonal-collection.jpg",
     link: "/pastel-de-sarita/explore?collection=seasonal"
   }
 ];
@@ -154,7 +150,6 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -198,7 +193,6 @@ const scrollToTop = () => {
   transform: translateY(20px);
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -251,7 +245,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -268,17 +261,14 @@ const scrollToTop = () => {
   animation-delay: 500ms;
 }
 
-/* Background gradient */
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
 }
 
-/* Smooth transitions for hover effects */
 .router-link, button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Responsive typography */
 @media (max-width: 640px) {
   .text-3xl {
     font-size: 1.75rem;

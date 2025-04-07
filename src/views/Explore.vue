@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen bg-gradient-to-r from-[#f5f5f5] via-[#fff9f1] to-[#f5f5f5] text-[#3e2723] font-serif">  
-    <!-- Hero Section -->
     <section class="relative pt-16 pb-8 px-4 sm:pt-24 sm:pb-12 sm:px-6 lg:pt-32 lg:pb-16 text-center animate-fade-in">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 animate-slide-up">
@@ -50,7 +49,6 @@
       @close="closePreview"
     />
 
-    <!-- Call to Action -->
     <section class="py-12 sm:py-16 bg-[#3e2723] text-[#ffd54f] animate-fade-in">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 animate-slide-up">Can't Decide Which One Do You Like?</h2>
@@ -99,7 +97,7 @@ const menuItems = [
     price: 32.99, 
     chocolateType: ['milk'], 
     occasions: ['birthday', 'special'], 
-    image: "/classic-chocolate-cake.png" 
+    image: "./classic-chocolate-cake.png" 
   },
   { 
     id: 2, 
@@ -108,7 +106,7 @@ const menuItems = [
     price: 36.50, 
     chocolateType: ['dark'], 
     occasions: ['romantic', 'special'], 
-    image: "/dark-fantasy.png" 
+    image: "./dark-fantasy.png" 
   },
   { 
     id: 3, 
@@ -117,7 +115,7 @@ const menuItems = [
     price: 38.75, 
     chocolateType: ['dark', 'mixed'], 
     occasions: ['birthday', 'wedding'], 
-    image: "/hazelnut-heaven.png" 
+    image: "./hazelnut-heaven.png" 
   },
   { 
     id: 4, 
@@ -126,7 +124,7 @@ const menuItems = [
     price: 34.99, 
     chocolateType: ['white'], 
     occasions: ['wedding', 'romantic'], 
-    image: "/white-raspberry.png" 
+    image: "./white-raspberry.png" 
   },
   { 
     id: 5, 
@@ -135,7 +133,7 @@ const menuItems = [
     price: 39.99, 
     chocolateType: ['milk', 'dark'], 
     occasions: ['special', 'birthday'], 
-    image: "/caramel-delight.png" 
+    image: "./caramel-delight.png" 
   },
   { 
     id: 6, 
@@ -144,7 +142,7 @@ const menuItems = [
     price: 37.50, 
     chocolateType: ['dark'], 
     occasions: ['special'], 
-    image: "/mocha-supreme.png" 
+    image: "./mocha-supreme.png" 
   }
 ];
 
@@ -249,7 +247,6 @@ const handleCheckout = () => {
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -275,7 +272,6 @@ const handleCheckout = () => {
   animation: pop 0.3s ease;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -317,7 +313,6 @@ const handleCheckout = () => {
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -325,7 +320,6 @@ const handleCheckout = () => {
   animation-delay: 200ms;
 }
 
-/* Responsive grid */
 @media (max-width: 640px) {
   .product-grid {
     grid-template-columns: repeat(1, 1fr);

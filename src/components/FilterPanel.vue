@@ -1,6 +1,5 @@
 <template>
   <section class="bg-white border-t-4 border-b-4 border-[#ffd54f] relative z-20 shadow-sm">
-    <!-- Filter Button -->
     <div class="container mx-auto px-4 sm:px-6 py-2 sm:py-3 flex justify-center">
       <button 
         @click="toggleFilters"
@@ -19,12 +18,10 @@
       </button>
     </div>
 
-    <!-- Filter Panel Content -->
     <Transition name="filter-slide">
       <div v-if="showFilters" class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 border-t border-[#d7ccc8]">
         <h4 class="text-center text-[#5d4037] font-medium mb-3 sm:mb-4 text-sm sm:text-base animate-fade-in">Filter Our Cakes</h4>
         
-        <!-- Chocolate Type -->
         <div class="mb-3 sm:mb-4 animate-fade-in delay-100">
           <h5 class="text-xs sm:text-sm font-semibold text-[#3e2723] mb-1 sm:mb-2 text-center">Chocolate Type</h5>
           <div class="flex flex-wrap justify-center gap-1 sm:gap-2">
@@ -42,7 +39,6 @@
           </div>
         </div>
         
-        <!-- Occasions -->
         <div class="mb-3 sm:mb-4 animate-fade-in delay-200">
           <h5 class="text-xs sm:text-sm font-semibold text-[#3e2723] mb-1 sm:mb-2 text-center">Perfect For</h5>
           <div class="flex flex-wrap justify-center gap-1 sm:gap-2">
@@ -60,7 +56,6 @@
           </div>
         </div>
         
-        <!-- Price Range -->
         <div class="animate-fade-in delay-300">
           <h5 class="text-xs sm:text-sm font-semibold text-[#3e2723] mb-1 sm:mb-2 text-center">Price Range</h5>
           <div class="flex justify-center">
@@ -122,7 +117,6 @@ const toggleFilters = () => {
 </script>
 
 <style scoped>
-/* Filter panel slide animation */
 .filter-slide-enter-active,
 .filter-slide-leave-active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,7 +137,6 @@ const toggleFilters = () => {
   transform: translateY(0);
 }
 
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
   opacity: 0;
@@ -168,7 +161,6 @@ const toggleFilters = () => {
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -179,7 +171,6 @@ const toggleFilters = () => {
   animation-delay: 300ms;
 }
 
-/* Better touch targets for mobile */
 button {
   min-width: 60px;
   min-height: 28px;
@@ -192,7 +183,6 @@ button {
   }
 }
 
-/* Rotate utility */
 .rotate-180 {
   transform: rotate(180deg);
 }

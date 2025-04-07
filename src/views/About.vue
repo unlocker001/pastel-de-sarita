@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-[#f9f5f0] to-[#fff9f1] text-[#3e2723] font-serif">
-    <!-- Hero Section -->
     <section class="relative pt-24 pb-12 px-4 sm:pt-32 sm:pb-16 sm:px-6 text-center animate-fade-in">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-slide-up">
@@ -15,7 +14,6 @@
       </div>
     </section>
 
-    <!-- Our Journey -->
     <section class="py-12 px-4 sm:py-16 sm:px-6 border-y border-[#d7ccc8] bg-white bg-opacity-50">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row items-center gap-8 sm:gap-12 mb-12 sm:mb-16">
@@ -54,7 +52,6 @@
       </div>
     </section>
 
-    <!-- Our Philosophy -->
     <section class="py-12 px-4 sm:py-16 sm:px-6 bg-[#fff9f1]">
       <div class="max-w-4xl mx-auto text-center animate-fade-in">
         <h2 class="text-2xl sm:text-3xl font-bold mb-6 animate-slide-up">
@@ -82,7 +79,6 @@
       </div>
     </section>
 
-    <!-- Meet the Team -->
     <section class="py-12 px-4 sm:py-16 sm:px-6">
       <div class="max-w-6xl mx-auto animate-fade-in">
         <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 animate-slide-up">
@@ -113,7 +109,6 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="py-12 sm:py-16 bg-[#3e2723] text-[#ffd54f] animate-fade-in">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 animate-slide-up">Ready to Taste the Difference?</h2>
@@ -163,19 +158,19 @@ const team = [
     name: "Sarita M.",
     role: "Founder & Head Chocolatier",
     bio: "With 15+ years in pastry arts, Sarita's creations are the heart of our menu.",
-    image: "/artisan-baker.jpg"
+    image: "./artisan-baker.jpg"
   },
   {
     name: "Carlos R.",
     role: "Master Baker",
     bio: "Specializes in perfecting the texture and structure of our cakes.",
-    image: "/artisan-baker.jpg"
+    image: "./artisan-baker.jpg"
   },
   {
     name: "Elena T.",
     role: "Customer Experience",
     bio: "Ensures every order is a delightful experience from start to finish.",
-    image: "/artisan-baker.jpg"
+    image: "./artisan-baker.jpg"
   }
 ];
 
@@ -211,7 +206,6 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
-/* Base fade-in animation */
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
@@ -223,7 +217,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Slide up animation */
 .animate-slide-up {
   animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -237,7 +230,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Slide animations for left/right */
 .animate-slide-left {
   animation: slideLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -264,7 +256,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Underline expansion animation */
 .animate-underline-expand {
   transform: scaleX(0);
   transform-origin: left;
@@ -277,7 +268,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Floating animation for images */
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -291,7 +281,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Icon bounce animation */
 .animate-icon-bounce {
   animation: iconBounce 1s ease infinite alternate;
 }
@@ -302,7 +291,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Slow pulse animation for CTA */
 .animate-pulse-slow {
   animation: pulseSlow 2.5s ease infinite;
 }
@@ -316,7 +304,6 @@ const scrollToTop = () => {
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -333,12 +320,10 @@ const scrollToTop = () => {
   animation-delay: 500ms;
 }
 
-/* Smooth transitions for hover effects */
 .router-link, button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Responsive typography for smaller screens */
 @media (max-width: 640px) {
   .text-3xl {
     font-size: 1.75rem;

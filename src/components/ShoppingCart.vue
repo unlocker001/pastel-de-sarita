@@ -1,5 +1,4 @@
 <template>
-  <!-- Overlay that appears when cart is open -->
   <Transition name="fade">
     <div 
       v-if="show"
@@ -8,7 +7,6 @@
     />
   </Transition>
 
-  <!-- Shopping Cart Sidebar -->
   <aside 
     class="fixed top-0 right-0 h-full w-full md:w-96 bg-[#2c1b17] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out"
     :class="{'translate-x-0': show, 'translate-x-full': !show}"
@@ -16,7 +14,6 @@
     aria-label="Shopping cart"
   >
     <div class="p-6 h-full flex flex-col">
-      <!-- Cart Header -->
       <header class="flex justify-between items-center border-b border-[#ffd54f]/30 pb-4">
         <h2 class="text-2xl text-[#ffd54f]">Your Cart</h2>
         <button 
@@ -28,10 +25,8 @@
         </button>
       </header>
 
-      <!-- Empty State -->
       <EmptyCart v-if="isEmpty" @close="emit('close')" />
 
-      <!-- Cart Items -->
       <TransitionGroup 
         v-else 
         name="cart-item" 
@@ -46,7 +41,6 @@
         />
       </TransitionGroup>
 
-      <!-- Cart Footer -->
       <CartFooter 
         v-if="!isEmpty" 
         :total="total"
@@ -64,7 +58,6 @@ import EmptyCart from './EmptyCart.vue';
 import CartItem from './CartItem.vue';
 import CartFooter from './CartFooter.vue';
 
-// Define props without creating an unnecessary computed property
 const props = defineProps({
   show: {
     type: Boolean,
@@ -96,7 +89,6 @@ const handleCheckout = () => {
 </script>
 
 <style scoped>
-/* Your existing styles remain unchanged */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
@@ -115,14 +107,13 @@ const handleCheckout = () => {
   transition-delay: 0.05s;
 }
 
-/* Update the transition styles */
 .cart-item-move {
   transition: transform 0.5s ease;
 }
 
 .cart-item-leave-active {
   position: absolute;
-  width: calc(100% - 3rem); /* Adjust based on your padding */
+  width: calc(100% - 3rem); 
 }
 
 .cart-item-enter-active,
@@ -140,7 +131,6 @@ const handleCheckout = () => {
   transform: translateX(-30px);
 }
 
-/* Add this for smooth item reordering */
 .cart-item-enter-to,
 .cart-item-leave-from {
   opacity: 1;

@@ -28,7 +28,6 @@ const handleBrowseAndScroll = () => {
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -47,7 +46,6 @@ const handleBrowseAndScroll = () => {
   animation: pulseSlow 3s ease infinite;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -70,12 +68,10 @@ const handleBrowseAndScroll = () => {
   50% { transform: scale(1.03); }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
 
-/* Smooth transitions */
 a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

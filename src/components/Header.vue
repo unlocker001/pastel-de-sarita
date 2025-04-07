@@ -1,6 +1,5 @@
 <template>
   <header class="py-8 md:py-16 px-4 md:px-8 text-center bg-[#2c1b17] text-white shadow-lg relative overflow-hidden z-10 animate-fade-in">
-    <!-- Shopping Cart Icon -->
     <div class="absolute top-4 right-4 md:top-6 md:right-6 z-50">
       <button 
         @click="$emit('toggle-cart')"
@@ -16,7 +15,6 @@
       </button>
     </div>
 
-    <!-- Sprinkles -->
     <div 
       v-for="i in (isMobile ? 15 : 30)" 
       :key="i"
@@ -24,7 +22,6 @@
       :style="getSprinkleStyle(i)"
     ></div>
     
-    <!-- Main Heading -->
     <div class="relative z-20">
       <h1 class="text-4xl md:text-6xl font-bold text-[#ffd54f] leading-tight mb-2 md:mb-4 animate-shimmer">
         Pastel de Sarita
@@ -37,7 +34,6 @@
       </p>
     </div>
     
-    <!-- Navigation -->
     <nav class="justify-center z-50 flex flex-wrap gap-2 md:gap-4 mt-4 md:mt-6">
       <router-link 
         v-for="(button, index) in navButtons"
@@ -88,9 +84,9 @@ const sprinkleColors = [
 
 const navButtons = ref<NavButton[]>([
   { label: 'Home', path: '/pastel-de-sarita/' },
-  { label: 'About', path: '/pastel-de-sarita/about' }, // Shortened for mobile
+  { label: 'About', path: '/pastel-de-sarita/about' }, 
   { label: 'Explore', path: '/pastel-de-sarita/explore' },
-  { label: 'Matchmaker', path: '/pastel-de-sarita/quiz' } // Shortened for mobile
+  { label: 'Matchmaker', path: '/pastel-de-sarita/quiz' }
 ]);
 
 const getSprinkleStyle = (i: number) => ({
@@ -106,7 +102,6 @@ const getSprinkleStyle = (i: number) => ({
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -178,7 +173,6 @@ const getSprinkleStyle = (i: number) => ({
   }
 }
 
-/* Sprinkles animation */
 @keyframes falling {
   0% {
     transform: translateY(-20px) rotate(0deg);
@@ -218,7 +212,6 @@ header {
   will-change: transform;
 }
 
-/* Cart count badge */
 .cart-count {
   position: absolute;
   top: -4px;
@@ -243,7 +236,6 @@ header {
   }
 }
 
-/* Navigation button styles */
 .nav-button {
   position: relative;
   white-space: nowrap;
@@ -285,7 +277,6 @@ header {
   background: #ffd54f;
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }

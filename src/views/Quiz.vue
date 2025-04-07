@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-[#f5f5f5] to-[#fff9f1] text-[#3e2723] px-4 py-6 sm:p-6 font-serif">    
     <div class="max-w-2xl mx-auto py-6 sm:py-12 text-center featured-section z-10 mt-12 sm:mt-20 relative">
-      <!-- Quiz Intro -->
       <section v-if="currentStep === 0" class="text-center animate-fade-in">
         <div class="animate-bounce-in">
           <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
@@ -22,7 +21,6 @@
         </button>
       </section>
 
-      <!-- Quiz Questions -->
       <section v-else-if="currentStep <= questions.length" class="animate-fade-in">
         <div class="bg-white rounded-xl shadow-lg p-4 sm:p-8 animate-pop-in">
           <div class="mb-4 sm:mb-6">
@@ -46,7 +44,6 @@
         </div>
       </section>
 
-      <!-- Results -->
       <section v-else class="text-center animate-fade-in">
         <div class="bg-white rounded-xl shadow-lg p-4 sm:p-8 max-w-2xl mx-auto animate-pop-in">
           <h2 class="text-3xl sm:text-4xl font-bold text-[#5d4037] mb-6 sm:mb-8 relative inline-block">
@@ -87,7 +84,6 @@
     </div>
   </div>
   
-  <!-- Call to Action -->
   <section class="py-12 sm:py-16 bg-[#3e2723] text-[#ffd54f] animate-fade-in">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Ready to Choose?</h2>
@@ -128,7 +124,6 @@ interface Cake {
   tags: string[];
 }
 
-// Quiz questions
 const questions: QuizQuestion[] = [
   {
     text: "What's your favorite chocolate type?",
@@ -166,7 +161,6 @@ const questions: QuizQuestion[] = [
   }
 ];
 
-// Available cakes (matches your menuItems from Explore.vue)
 const cakes: Cake[] = [
   { 
     id: 1,
@@ -222,7 +216,6 @@ const currentStep = ref<number>(0);
 const answers = ref<Record<number, string>>({});
 const cartStore = useCartStore();
 
-// Hover effect methods
 const hoverOption = (event: MouseEvent) => {
   const target = event.currentTarget as HTMLElement;
   target.style.transform = 'scale(1.02)';
@@ -286,7 +279,6 @@ const scrollToTop = () => {
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -334,7 +326,6 @@ const scrollToTop = () => {
   animation: pop 0.3s ease;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -420,19 +411,16 @@ const scrollToTop = () => {
   }
 }
 
-/* Delays */
 .delay-100 {
   animation-delay: 100ms;
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .featured-section {
     margin-top: 1rem;
   }
 }
 
-/* Button transitions */
 button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

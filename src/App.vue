@@ -34,8 +34,8 @@ const touchStartX = ref(0);
 const touchEndX = ref(0);
 const touchStartY = ref(0);
 const isSwiping = ref(false);
-const minSwipeDistance = 100; // Increased minimum distance
-const maxVerticalDeviation = 30; // Max vertical movement allowed during swipe
+const minSwipeDistance = 100; 
+const maxVerticalDeviation = 30;
 
 const toggleCart = () => {
   showCart.value = !showCart.value;
@@ -51,7 +51,6 @@ const handleTouchStart = (e: TouchEvent) => {
 const handleTouchMove = (e: TouchEvent) => {
   if (!isSwiping.value) {
     const yDiff = Math.abs(e.changedTouches[0].screenY - touchStartY.value);
-    // Only consider it a swipe if primarily horizontal movement
     if (yDiff < maxVerticalDeviation) {
       isSwiping.value = true;
     }
@@ -68,19 +67,14 @@ const handleTouchEnd = () => {
   const distance = touchStartX.value - touchEndX.value;
   const absDistance = Math.abs(distance);
   
-  // Only trigger if swipe meets minimum distance and is primarily horizontal
   if (absDistance > minSwipeDistance) {
-    // Right to left swipe (open cart)
     if (distance > 0 && !showCart.value) {
       toggleCart();
     }
-    // Left to right swipe (close cart)
     else if (distance < 0 && showCart.value) {
       toggleCart();
     }
   }
-  
-  // Reset values
   isSwiping.value = false;
 };
 </script>

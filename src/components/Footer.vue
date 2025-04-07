@@ -1,8 +1,6 @@
 <template>
-  <!-- Footer -->
   <footer class="bg-[#2c1b17] text-[#ffd54f] shadow-inner animate-fade-in">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-      <!-- Brand Column -->
       <div class="text-center sm:text-left animate-slide-up">
         <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Pastel de Sarita</h3>
         <p class="text-[#fff9f1] text-sm sm:text-base mb-3 sm:mb-4">
@@ -21,7 +19,6 @@
         </div>
       </div>
 
-      <!-- Contact Column -->
       <div class="text-center sm:text-left animate-slide-up delay-100">
         <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#fff9f1]">Contact Us</h4>
         <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
@@ -40,7 +37,6 @@
         </ul>
       </div>
 
-      <!-- Hours Column -->
       <div class="text-center sm:text-left animate-slide-up delay-200">
         <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#fff9f1]">Hours</h4>
         <ul class="space-y-1 sm:space-y-2 text-sm sm:text-base">
@@ -59,7 +55,6 @@
         </ul>
       </div>
 
-      <!-- Newsletter Column -->
       <div class="text-center sm:text-left animate-slide-up delay-300">
         <h4 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#fff9f1]">Sweet Updates</h4>
         <p class="text-[#fff9f1] text-sm sm:text-base mb-3 sm:mb-4">
@@ -81,7 +76,6 @@
       </div>
     </div>
 
-    <!-- Copyright -->
     <div class="border-t border-[#5d4037] py-4 sm:py-6 text-center text-xs sm:text-sm text-[#fff9f1] animate-fade-in delay-500">
       © 2025 Pastel de Sarita - Crafted with Love & Chocolate
     </div>
@@ -138,7 +132,6 @@ const socialLinks: SocialLink[] = [
 </script>
 
 <style scoped>
-/* Base animations */
 .animate-fade-in {
   animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
@@ -158,7 +151,6 @@ const socialLinks: SocialLink[] = [
   animation: pulseSlow 3s ease infinite;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -187,7 +179,6 @@ const socialLinks: SocialLink[] = [
   }
 }
 
-/* Delay utilities */
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -204,7 +195,6 @@ const socialLinks: SocialLink[] = [
   animation-delay: 500ms;
 }
 
-/* Hover effects */
 footer a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -220,7 +210,6 @@ button:focus, input:focus {
   box-shadow: 0 0 0 2px #ffd54f;
 }
 
-/* Social icons */
 .social-icon {
   transition: transform 0.3s ease, color 0.3s ease;
 }
