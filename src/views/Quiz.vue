@@ -167,7 +167,7 @@ const cakes: Cake[] = [
     title: "Classic Chocolate Cake", 
     description: "Rich and moist chocolate delight.", 
     price: 32.99,
-    image: "/classic-chocolate-cake.png",
+    image: "./classic-chocolate-cake.png",
     tags: ["milk", "birthday", "special", "simple", "soft"]
   },
   { 
@@ -175,7 +175,7 @@ const cakes: Cake[] = [
     title: "Dark Fantasy", 
     description: "Decadent dark chocolate with a hint of espresso.", 
     price: 36.50,
-    image: "/dark-fantasy.png",
+    image: "./dark-fantasy.png",
     tags: ["dark", "romantic", "special", "balanced", "soft"]
   },
   { 
@@ -183,7 +183,7 @@ const cakes: Cake[] = [
     title: "Hazelnut Heaven", 
     description: "Chocolate cake with crunchy hazelnut layers.", 
     price: 38.75,
-    image: "/hazelnut-heaven.png",
+    image: "./hazelnut-heaven.png",
     tags: ["dark", "mixed", "birthday", "wedding", "crunchy"]
   },
   { 
@@ -191,7 +191,7 @@ const cakes: Cake[] = [
     title: "White Chocolate Raspberry", 
     description: "Creamy white chocolate with tangy raspberry filling.", 
     price: 34.99,
-    image: "/white-raspberry.png",
+    image: "./white-raspberry.png",
     tags: ["white", "wedding", "romantic", "balanced", "creamy"]
   },
   { 
@@ -199,7 +199,7 @@ const cakes: Cake[] = [
     title: "Chocolate Caramel Delight", 
     description: "Layers of chocolate and caramel with sea salt.", 
     price: 39.99,
-    image: "/caramel-delight.png",
+    image: "./caramel-delight.png",
     tags: ["milk", "dark", "special", "birthday", "adventurous", "creamy"]
   },
   { 
@@ -207,7 +207,7 @@ const cakes: Cake[] = [
     title: "Mocha Supreme", 
     description: "Coffee-infused chocolate cake with espresso buttercream.", 
     price: 37.50,
-    image: "/mocha-supreme.png",
+    image: "./mocha-supreme.png",
     tags: ["dark", "special", "adventurous", "soft"]
   }
 ];
